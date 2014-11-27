@@ -1,6 +1,8 @@
-## Jmxtrans crawler
+## jmxtrans crawler
 
-### Config
+### jvm-gc-*
+
+#### configuration 
 
  * crawled-host
  * crawled-port
