@@ -1,0 +1,33 @@
+{
+  "servers" : [ {
+    "port" : "crawled-host-port",
+    "host" : "crawled-host",
+    "queries" : [ {
+      "outputWriters" : [ {
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "settings" : {
+          "port" : graphite-port,
+          "host" : "graphite-host",
+          "typeNames" : [ "name" ]
+        }
+      } ],
+      "obj" : "java.lang:type=GarbageCollector,name=PS Scavenge",
+      "resultAlias": "jvm.gc.yg.psscavenge",
+      "attr" : [ "CollectionCount", "CollectionTime" ]
+    }, {
+     "outputWriters" : [ {
+        "@class" : "com.googlecode.jmxtrans.model.output.GraphiteWriter",
+        "settings" : {
+          "port" : graphite-port,
+          "host" : "graphite-host",
+          "typeNames" : [ "name" ]
+        }
+      } ],
+      "obj" : "java.lang:type=GarbageCollector,name=PS Scavenge",
+      "resultAlias": "jvm.gc.yg.psscavenge",
+      "attr" : [ "LastGcInfo" ]
+  } ],
+    "numQueryThreads" : 2
+  } ]
+}
+
