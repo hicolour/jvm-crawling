@@ -1,6 +1,6 @@
 ## Jmxtrans crawler
 
-# Config
+### Config
 
  * crawled-host
  * crawled-port
